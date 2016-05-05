@@ -1,5 +1,6 @@
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.google.gson.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.InputStream;
 import java.util.Properties;
@@ -37,6 +38,15 @@ public class Main {
             for (Foo a : foo2) {
                 System.out.println("Foo: " + a.getAppId() + " ," + a.getAppSecret());
             }
+
+            // For JSONArray & JSONObject
+            System.out.println("Case 4");
+            JSONArray list = new JSONArray(fbApps);
+            for (int i = 0; i < list.length(); ++i) {
+                JSONObject obj = list.getJSONObject(i);
+                System.out.println(obj);
+            }
+
 
         } catch (Exception ex) {
             ex.printStackTrace();
