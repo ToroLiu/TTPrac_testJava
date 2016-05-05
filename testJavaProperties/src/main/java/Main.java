@@ -47,6 +47,9 @@ public class Main {
                 System.out.println(obj);
             }
 
+            System.out.println("Case 5");
+            System.out.println(prop.getProperty("multi.lines"));
+
 
         } catch (Exception ex) {
             ex.printStackTrace();
